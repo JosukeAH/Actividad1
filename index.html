@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" class="ancla" href="./css/normalize.css"> -->
+    <link rel="stylesheet" class="ancla" href="./css/style.css">
+    <title>Maquetado CSS </title>
+    <link rel="shortcut icon" class="ancla" href="./img/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <main>
+        <!--Header-->
+        <header class="header">
+            <div class="header_logotipo">
+                <img src="./img/pasta.jpg" alt="" class="header_img">
+            </div>
+            <div class="header_ancla">
+                <h1>
+                    <a class="ancla" href="index.html"> ITALIANOS RESTAURANT</a>
+                </h1>
+            </div>
+        </header>
+        <!--Fin de header-->
+        <!--Inicio de navbar-->
+        <nav class='nav'>
+            <ul class="nav_ul">
+                <li class="nav_li"><a class="ancla" href="index.html">Inicio</a></li>
+                <li class="nav_li"><a class="ancla" href="index.html">Contenido</a></li>
+                <li class="nav_li"><a class="ancla" href="index.html">Pizza</a>
+                    <ul>
+                        <li><a class="ancla" href="">Con piña</a></li>
+                        <li><a class="ancla" href="">Sin piña</a></li>
+                    </ul>
+                </li>
+                <li class="nav_li"><a class="ancla" href="index.html">Pastas</a>
+                    <ul>
+                        <li><a class="ancla" href="">Lasagna</a></li>
+                        <li><a class="ancla" href="">Spaggueti</a></li>
+                        <li><a class="ancla" href="">Nose</a></li>
+                    </ul>
+                </li>
+                <li class="nav_li"><a class="ancla" href="index.html">Proyectos</a></li>
+                <li class="nav_li"><a class="ancla" href="index.html">Reseñas</a></li>
+                <li class="nav_li"><a class="ancla" href="index.html">Sobre mí </a></li>
+                <li class="nav_li"><a class="ancla" href="index.html">Blog</a></li>
+                <li class="nav_li"><a class="ancla" href="index.html">Contacto</a></li>
+                <li class="nav_li"><a class="ancla" href="index.html">Redes sociales</a></li>
+            </ul>
+        </nav>
+        <!-- Fin del nav -->
+
+        <div class="contenido">
+            <aside class="contenido_aside">
+                <div class="contenido_aside_div ">
+                    <h3 class="contenido_aside_div_title">Iniciar Sesión Cliente</h3 class="contenido_aside_div_title">
+
+                    <label for="">Usuario</label>
+                    <input type="text">
+
+                    <label for="">Contraseña</label>
+                    <input type="password">
+
+                    <input type="submit" class="button" value="Entrar" v-on:click="data.registrado=true">
+                    <!-- <button v-on:click="counter += 1">Add 1</button> -->
+                    <a href="">Olvide mi contraseña</a> <br>
+
+                </div>
+                <div class="contenido_aside_div ">
+                    <h3 class="contenido_aside_div_title blue">Pedir sin registrarse</h3
+                        class="contenido_aside_div_title">
+                    <center>
+                    <button v:on:click="data.registrado=false"  class="button">Mostrar</button>
+                    </center>
+
+
+                </div>
+
+
+            </aside>
+
+
+            <!-- Inicio de las secciones -->
+            <div class="secciones">
+
+
+                <section class="secciones_frontend" v-show="registrado">
+                    <h2 class="secciones_frontend_title"> Menú Usuario no registrado</h2>
+                    <div>
+
+                        <ul>
+
+                            <li>
+                                Pizza
+                            </li>
+                            <li>
+                                Lasagna
+                            </li>
+                            <li>
+                                comida italiana1
+                            </li>
+                            <li>
+                                comida italiana2
+                            </li>
+                            <li>
+                                comida italiana3
+                            </li>
+                        </ul>
+                    </div>
+                    <h2 class="secciones_frontend_title"> {{titulo}}Promociones </h2>
+                    <div>
+
+                        <ul>
+
+                            <li>
+                                2 PIZZAS X 180 PESOS
+                            </li>
+                            <li>
+                                Lasagna
+                            </li>
+                            <li>
+                                3 LASAGNAS X EL PRECIO DE 2
+                            </li>
+                            <li>
+                                PROMOCION 2
+                            </li>
+                            <li>
+                                PROMOCION 3
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="secciones_frontend" v-show="!registrado">
+
+                    <h2 class="secciones_frontend_title"> Menú </h2>
+                    <div>
+
+                        <ul>
+
+                            <li>
+                                Pizza
+                            </li>
+                            <li>
+                                Lasagna
+                            </li>
+                            <li>
+                                comida italiana1
+                            </li>
+                            <li>
+                                comida italiana2
+                            </li>
+                            <li>
+                                comida italiana3
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="secciones_frontend">
+                    <h2 class="secciones_frontend_title"> Noticias del restaurant</h2>
+
+
+
+                    <span class="date">[20-12-2020. Carlos Alva]</span>
+                    </article>
+
+
+
+
+                    <article class="secciones_frontend_articulo">
+                        <span class="icons">a</span>
+                        <p>
+                            <span class="stickers">
+                                <img src="./img/scotch.png" alt="stickerone" class="stickerone">
+                                <img src="./img/scotch.png" alt="stickertwo" class="stickertwo">
+                            </span>
+                            <a href="">Noticias Frontend</a>
+
+                        </p>
+                        <span class="date">[20-12-2020. Carlos Alva]</span>
+                    </article>
+                    <article class="secciones_frontend_articulo">
+                        <span class="icons">a</span>
+                        <p>
+                            <a href="">FrontEnd</a>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, veniam debitis quam nobis
+                            animi
+                            similique beatae rerum minima corrupti quaerat vitae minus voluptatem commodi provident
+                            omnis
+                            totam
+                            alias, facere laudantium.
+                        </p>
+                        <span class="date">[20-12-2020. Carlos Alva]</span>
+                    </article>
+                </section>
+    </main>
+
+
+    <aside id="frases">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum recusandae. <br> <a href="">Leer más
+            frases</a>
+    </aside>
+    </div>
+
+    <div class="clearfix"></div>
+    <div class="history">
+        <a href="">Ver historico de noticias</a>
+    </div>
+
+    <footer class="footer">
+        <p> &copy; Desarrollado por Carlos Alvarado</p>
+        <p>Desarrollado con un curso de udemy</p>
+    </footer>
+    <script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
